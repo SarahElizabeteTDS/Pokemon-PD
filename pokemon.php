@@ -37,10 +37,14 @@ class Pokemon {
 
     function aumentarExperiencia($exp) {
         $this->experiencia += $exp;
-        if($this->experiencia >= 100)
+        if($this->experiencia >= 20)
             $this->aumentarNivel();
     }
 
+    function imprimirDados()
+    {
+        print"\n\nO Pokémon escolhido é o " . $this ->nome . "\nSeu tipo é: " . $this ->tipos . "Possui: " . $this ->pontosVida . " de vida\n" . $this ->experiencia . " de XP\n" . "Level atual: " . $this ->nivel . "\n\n";
+    }
 
 
 }//FINAL classe Pokemon
@@ -48,20 +52,25 @@ class Pokemon {
 
 //Programa principal
 $psyduck = new Pokemon();
-$psyduck->nome = "Psyduck";
-$psyduck->tipo = "Aquático";
-print_r($psyduck);
+$psyduck->imprimirDados();
 
 $lucario = new Pokemon();   
-$lucario->nome = "Lucario";
-$lucario->tipo = "Lutador";
-print_r($lucario);
+$lucario->imprimirDados();
 
-$psyduck->batalhar();
-print_r($psyduck);
-$psyduck->batalhar();
-print_r($psyduck);
-$psyduck->batalhar();
-print_r($psyduck);
-$psyduck->batalhar();
-print_r($psyduck);
+for ($i=0; $i < 5; $i++) 
+{ 
+    $psyduck->batalhar();
+    print_r($psyduck);
+    print "\n";
+}
+
+print "\n\n";
+
+for ($i=0; $i < 5; $i++) 
+{ 
+    $psyduck->batalhar();
+    print_r($psyduck);
+    print "\n";
+}
+
+
