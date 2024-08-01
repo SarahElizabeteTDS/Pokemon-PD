@@ -41,7 +41,7 @@ class Pokemon {
             $this->aumentarNivel();
     }
 
-    function imprimirDados()
+    function __toString()
     {
         $texto = "Nome:" . $this->nome . "\n";
         $texto .= "Tipo: " . $this->tipo . "\n";
@@ -60,12 +60,12 @@ class Pokemon {
 $psyduck = new Pokemon();
 $psyduck->nome = "PsyDuck";
 $psyduck->tipo = "Psiquico";
-print $psyduck->imprimirDados();
+print $psyduck;
 
 $lucario = new Pokemon();   
 $psyduck->nome = "Lucario";
 $psyduck->tipo = "Lutador";
-print $lucario->imprimirDados();
+print $lucario;
 
 for ($i=0; $i < 5; $i++) 
 { 
@@ -81,5 +81,5 @@ for ($i=0; $i < 5; $i++)
     print "\n";
 }
 
-print $lucario->imprimirDados();
-print $psyduck->imprimirDados();
+print $lucario;
+print $psyduck;
