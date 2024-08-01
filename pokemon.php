@@ -52,7 +52,16 @@ $psyduck->nome = "Psyduck";
 $psyduck->tipo = "Aquático";
 print_r($psyduck);
 
-$lucario = new Pokemon();
+$lucario = new Pokemon();   
 $lucario->nome = "Lucario";
 $lucario->tipo = "Lutador";
 print_r($lucario);
+
+$psyduck->batalhar();
+print_r($psyduck);
+$psyduck->batalhar();
+print_r($psyduck);
+$psyduck->batalhar();
+print_r($psyduck);
+$psyduck->batalhar();
+print_r($psyduck);
