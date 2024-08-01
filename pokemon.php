@@ -43,7 +43,7 @@ class Pokemon {
 
     function imprimirDados()
     {
-        print"\n\nO Pokémon escolhido é o " . $this ->nome . "\nSeu tipo é: " . $this ->tipos . "Possui: " . $this ->pontosVida . " de vida\n" . $this ->experiencia . " de XP\n" . "Level atual: " . $this ->nivel . "\n\n";
+        print"\n\nO Pokémon escolhido é o " . $this ->nome . "\nSeu tipo é: " . $this->tipo . "\n" . "Possui: " . $this->pontosVida . " de vida\n" . $this ->experiencia . " de XP\n" . "Level atual: " . $this ->nivel . "\n\n";
     }
 
 
@@ -52,15 +52,18 @@ class Pokemon {
 
 //Programa principal
 $psyduck = new Pokemon();
+$psyduck->nome = "PsyDuck";
+$psyduck->tipo = "Psiquico";
 $psyduck->imprimirDados();
 
 $lucario = new Pokemon();   
+$psyduck->nome = "Lucario";
+$psyduck->tipo = "Lutador";
 $lucario->imprimirDados();
 
 for ($i=0; $i < 5; $i++) 
 { 
     $psyduck->batalhar();
-    print_r($psyduck);
     print "\n";
 }
 
@@ -69,8 +72,8 @@ print "\n\n";
 for ($i=0; $i < 5; $i++) 
 { 
     $psyduck->batalhar();
-    print_r($psyduck);
     print "\n";
 }
 
-
+$lucario->imprimirDados();
+$psyduck->imprimirDados();
